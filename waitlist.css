@@ -1,0 +1,83 @@
+/* General settings to remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Image */
+.image {
+    text-align: center;
+}
+
+.logo {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+}
+
+/* Ensure the body and html take the full height of the viewport */
+.theform {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9; /* Optional: background color for the form */
+    padding: 20px; /* Optional: padding for the form */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for the form */
+}
+
+/* Style individual input elements */
+label {
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+fieldset {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+div {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

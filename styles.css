@@ -1,0 +1,302 @@
+/* character encoding (optional) */
+@charset 'utf-8';
+
+/* general settings */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* prevent font scaling in landscape orientation on iOS devices */
+  scroll-behavior: smooth;
+}
+
+/* CSS variable */
+
+:root { /* accesible to all rule sets */
+  --accent-color: rgb(245, 26, 63);
+}
+
+/* text */
+
+@font-face {
+  font-family: 'Raleway Thin';
+  src: url('fanwood.woff');
+}
+
+h1, h2, nav {
+  font-family: 'Raleway Thin', Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+  line-height: 1.7em;
+}
+
+p {
+  font-family: 'Raleway Thin';
+  font-weight: lighter;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  margin-top: 0.5em;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: var(--accent-color);
+}
+
+a:hover, nav > a:hover {
+  color: gray;
+}
+
+a:active, nav > a:active {
+  color: lightgray;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+nav > a:link, nav > a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* header and navigation */
+
+#headline {
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header {
+  background-color: hsl(0, 0%, 10%); /* dark gray */
+  display: flex;
+  flex-direction: column;
+  height: 3.5em; /* Ensure a minimum height for sticky behavior */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure the header is above other content */
+}
+
+#logo {
+  width: 20%;
+  height: auto;
+}
+
+nav {
+  display: none; /* hide navigation */
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+svg.menu {
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  top: 1em;
+  right: 1em;
+}
+
+svg.menu:hover {
+  cursor: pointer;
+}
+
+/* class styles to be applied with JS */
+nav.toggle {
+  display: flex;
+}
+
+header.toggle {
+  height: 15em;
+}
+
+/* Part 1 */
+
+.part1 {
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+
+.banner1 {
+  width: 100%;
+  height: auto;
+}
+
+.container1 {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the content */
+  padding: 10px 20px 10px 10px;
+  box-sizing: border-box;
+}
+
+.content1 {
+  max-width: 50%;
+  color: white;
+  text-align: center;
+}
+
+.content1 > p {
+  font-size: 15px;
+}
+
+.banner1img {
+  width: 50%;
+  height: auto;
+  animation: floatAnimation 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes floatAnimation {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-20px);
+  }
+}
+
+.button {
+  background-color: #93358F;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #513786;
+}
+
+/* layout */
+
+header {
+  padding: 1em;
+}
+
+figure {
+  max-height: 35vh; /* percentage of viewport height */
+  overflow: hidden;
+  display: flex; /* in this case, for alignment */
+  align-items: center; /* center child element (banner image) vertically */
+}
+
+footer {
+  padding: 2em;
+}
+
+/* media queries */
+
+@media (min-width: 45em) {
+  header {
+    flex-direction: row;
+    height: 3.5em;
+    justify-content: space-between;
+  }
+
+  #logo {
+    width: 20%;
+    height: auto;
+  }
+
+  header.toggle {
+    height: 2.5em;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav > a {
+    margin-left: 1em;
+  }
+
+  svg.menu {
+    display: none; /* hide menu icon */
+  }
+
+  /* Part 1 */
+  .content1 > p {
+    font-size: 25px;
+  }
+
+  .content1 {
+    top: 0;
+    width: 55%;
+  }
+
+  .button {
+    padding: 15px 30px;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 70em) {
+  header {
+    flex-direction: row;
+    height: 4em;
+  }
+
+  #logo {
+    width: 10%;
+    height: auto;
+  }
+
+  nav {
+    align-items: center;
+  }
+
+  /* Part 1 */
+
+  #headline {
+    font-size: 100px;
+  }
+  .content1 > p {
+    font-size: 35px;
+  }
+
+  .content1 {
+    top: 10%;
+    width: 45%;
+  }
+
+  .button {
+    padding: 15px 30px;
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 120em) {
+  header {
+    flex-direction: row;
+    height: 3em;
+  }
+
+  #logo {
+    width: 20%;
+    height: auto;
+  }
+
+  nav {
+    align-items: center;
+  }
+}

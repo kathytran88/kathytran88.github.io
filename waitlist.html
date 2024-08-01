@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Intervia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="waitlist.css" rel="stylesheet"/>
+        <link rel="icon" sizes='32 X 32' href="images/favicon.png"/>
+    </head>
+
+    <body>
+        <div class="image">
+            <a href="index.html">
+                <img class="logo" src="images/logo3.png" alt="Intervia Logo">
+            </a>
+        </div>
+
+    <div class="theform">
+        <form method="post" action="form-script.php">
+            <label>
+                Your name:
+                <input type="text" name = 'name' required>
+            </label>
+
+            <label>
+                Your email:
+                <input type="email" name = 'email' required>
+            </label>
+
+            <label>
+                Your company/school:
+                <input type="text" name = 'company/school' required>
+            </label>
+
+            <fieldset>
+                <legend>How did you hear about us?</legend>
+
+                <label>
+                    <input type="checkbox" name="topics" value="unix">
+                    Linkedin
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topics" value="html">
+                    Friends/colleagues
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topics" value="css">
+                    Google search
+                </label>
+
+                <label>
+                    <input type="checkbox" name="topics" value="web-graphics">
+                    Job search websites (ex: Wellfound)
+                </label>
+            </fieldset>
+
+            <div>
+                <input type="submit" value="Send">
+            </div>
+            </form>
+        </div>
+    </body>
+</html>
