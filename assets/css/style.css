@@ -25,48 +25,48 @@
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    hsl(29, 71%, 81%) 3%, 
+    hsl(0, 22%, 88%) 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
     hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    hsla(240, 2%, 8%, 0) 100%
+  ), hsl(240, 33%, 96%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
+    hsl(8, 100%, 71%) 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
     hsla(45, 100%, 71%, 0.251) 0%, 
     hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+  ), hsl(240, 22%, 93%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
+    hsl(0, 37%, 91%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
     hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(35, 100%, 68%) /* Line below about me */
   );
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --jet: hsl(0, 15%, 91%); /* Box border*/
+  --onyx: hsl(240, 2%, 10%); /*Data Scientist word*/
+  --eerie-black-1: hsl(53, 18%, 81%); 
+  --eerie-black-2: hsl(44, 21%, 90%); /* Box fill*/
+  --smoky-black: hsl(52, 55%, 72%); /*Background color*/
+  --white-1: hsl(51, 35%, 75%);
+  --white-2: hsl(0, 3%, 6%);
+  --orange-yellow-crayola: hsl(45, 82%, 24%); /*Show contacts*/
+  --vegas-gold: hsl(30, 76%, 49%);
+  --light-gray: hsl(0, 6%, 3%); /*Words*/
+  --light-gray-70: hsla(0, 18%, 7%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -148,14 +148,14 @@ input, textarea {
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  color: var(--white);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { background: var(--white); }
 
 
 
