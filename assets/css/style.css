@@ -459,7 +459,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: hsla(46, 53%, 74%, 0.75);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -845,7 +845,7 @@ main {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .skill .title-wrapper data {
@@ -867,7 +867,9 @@ main {
   border-radius: inherit;
 }
 
-
+.skill {
+  margin-bottom: 50px;
+}
 
 
 
