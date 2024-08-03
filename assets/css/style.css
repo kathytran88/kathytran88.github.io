@@ -1159,7 +1159,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-400);
   padding: 13px 20px;
-  border: 1px solid var(--jet);
+  border: 1px solid var(--orange-yellow-crayola);
   border-radius: 14px;
   outline: none;
 }
