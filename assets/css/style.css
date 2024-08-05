@@ -605,6 +605,7 @@ main {
   -webkit-line-clamp: 4;
  /* -webkit-box-orient: vertical; */
   overflow: hidden;
+  margin-top: 5px;
 }
 
 
@@ -721,6 +722,27 @@ main {
   line-height: 1.6;
 }
 
+.btn1 {
+  position: relative;
+  z-index: 2;
+  padding: 5px;
+  border-radius: 7px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn1:hover {
+  background-color: black;
+  color: white;
+}
+.btn2.btn3 {
+  color: #db854f;
+  border: 2px solid #db854f;
+}
+
+.btn3 {
+  background: none;
+  text-align: center;
+  margin-top: 12px;
+}
 
 /**
  * #clients 
@@ -771,7 +793,7 @@ main {
  * education and experience 
  */
 
-.timeline { margin-bottom: 30px; }
+.timeline { margin-bottom: 30px; margin-top: 30px;}
 
 .timeline .title-wrapper {
   display: flex;
