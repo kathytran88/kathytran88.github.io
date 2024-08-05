@@ -559,7 +559,9 @@ main {
 /**
  * #testimonials 
  */
-
+.certi-text{
+  text-align: center;
+}
 .testimonials { margin-bottom: 30px; }
 
 .testimonials-title { margin-bottom: 20px; }
@@ -1145,6 +1147,15 @@ main {
 /*-----------------------------------*\
   #CONTACT
 \*-----------------------------------*/
+
+.inline-p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.inline-p b {
+  margin-right: 5px; /* Adjust the spacing as needed */
+}
 
 .mapbox {
   position: relative;
