@@ -266,7 +266,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: rgb(245, 153, 16);
   border-radius: 5px;
 }
 
