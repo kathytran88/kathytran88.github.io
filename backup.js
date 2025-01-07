@@ -56,45 +56,65 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
-// Filter feature
+// custom select variables
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-// Select all filter buttons
-const filterButtons = document.querySelectorAll('[data-filter-btn]');
+select.addEventListener("click", function () { elementToggleFunc(this); });
 
-// Select all project items
-const projectItems = document.querySelectorAll('[data-filter-item]');
+// add event in all select items
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
 
-// Add click event listeners to filter buttons
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Remove the 'active' class from all buttons
-    filterButtons.forEach(btn => btn.classList.remove('active'));
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
 
-    // Add the 'active' class to the clicked button
-    button.classList.add('active');
-
-    // Get the category from the button text
-    const filterCategory = button.textContent.trim();
-
-    // Filter project items
-    projectItems.forEach(item => {
-      const itemCategories = item.getAttribute('data-category').split(',').map(cat => cat.trim());
-
-      if (filterCategory === 'All' || itemCategories.includes(filterCategory)) {
-        item.classList.add('active'); // Show item
-        item.style.display = 'block';
-      } else {
-        item.classList.remove('active'); // Hide item
-        item.style.display = 'none';
-      }
-    });
   });
-});
+}
+
+// filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+
+  for (let i = 0; i < filterItems.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
+
+  }
+
+}
+
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
+
+}
 
 
-
-
-// Filter feature
 
 // contact form variables
 const form = document.querySelector("[data-form]");
