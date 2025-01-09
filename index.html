@@ -213,15 +213,15 @@
           </li>
 
           <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Achievements</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
           <li class="navbar-item">
@@ -255,7 +255,7 @@
             Hi. I am an aspiring data scientist who uses curiosity in numbers to solve business problems.
           </p>
 
-          <p>Click "Portfolio" to view my data science projects</p>
+          <p>Click "Projects" to view my data science projects</p>
 
         </section>
 
@@ -434,6 +434,206 @@
       -->
       </article>
 
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Data Science / Machine Learning</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web Development</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Has live server</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Deep Learning</button>
+            </li>
+
+          </ul>
+        
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="Data Science / Machine Learning, Has live server">
+              <a href="http://3.135.214.34:5000/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Financial Analyzer</h3>
+
+                <p class="project-category">Python Pandas, Sklearn K nearest neighbors, Decision Tree, Random Forest, Modern Portfolio Theory, Statistical Analysis, AWS EC2, Flask</p>
+
+              </a>
+            </li>
+            <li class="project-item  active" data-filter-item data-category="Data Science / Machine Learning, Has live server">
+              <a href="http://ec2-18-224-16-210.us-east-2.compute.amazonaws.com">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portfolio/1.png" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Bank Term Deposit Analysis</h3>
+
+                <p class="project-category">SQL, Python Pandas, Scikit-learn, Linear & Logistic Regression, Flask, AWS EC2</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Data Science / Machine Learning">
+              <a href="https://github.com/kathytran88/StockMirror">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.jpeg" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">StockMirror - Copy stock trades of top investors</h3>
+
+                <p class="project-category">Python BeautifulSoup & Selenium Webdriver, Pandas & Numpy</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Deep Learning">
+              <a href="https://github.com/SnazzyBeatle115/Smartcycle">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">SmartCycle - Machine Learning Trash Classification</h3>
+
+                <p class="project-category">Python PyTorch, Tensorflow, Keras</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Deep Learning">
+              <a href="https://github.com/kathytran88/face_emotion_recognition">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Facial Emotion Recognition</h3>
+
+                <p class="project-category">Python PyTorch</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Web Development, Has live server">
+              <a href="https://pokemon-game-eight-kappa.vercel.app/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/pokemon.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Pokemon Game</h3>
+
+                <p class="project-category">Javascript, HTML/CSS</p>
+
+              </a>
+            </li>
+          
+            <li class="project-item  active" data-filter-item data-category="Web Development">
+              <a href="https://github.com/kathytran88/onlinestore_php">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/onlinestore.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Online Shopping Cart</h3>
+
+                <p class="project-category">PHP, Javascript, HTML/CSS</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Web Development, Has live server">
+              <a href="https://memory-matching-game-phi.vercel.app/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/memory.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Memory Matching Game</h3>
+
+                <p class="project-category">Javascript, HTML/CSS</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
 
 
 
@@ -1149,205 +1349,7 @@
 
     
 </article>
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Data Science / Machine Learning</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web Development</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Has live server</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Deep Learning</button>
-            </li>
-
-          </ul>
-        
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-          </div>
-
-          <ul class="project-list">
-            <li class="project-item  active" data-filter-item data-category="Data Science / Machine Learning, Has live server">
-              <a href="http://3.135.214.34:5000/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Financial Analyzer</h3>
-
-                <p class="project-category">Python Pandas, Sklearn K nearest neighbors, Decision Tree, Random Forest, Modern Portfolio Theory, Statistical Analysis, AWS EC2, Flask</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="Data Science / Machine Learning, Has live server">
-              <a href="http://ec2-18-224-16-210.us-east-2.compute.amazonaws.com">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/portfolio/1.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Bank Term Deposit Analysis</h3>
-
-                <p class="project-category">SQL, Python Pandas, Scikit-learn, Linear & Logistic Regression, Flask, AWS EC2</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="Data Science / Machine Learning">
-              <a href="https://github.com/kathytran88/StockMirror">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.jpeg" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">StockMirror - Copy stock trades of top investors</h3>
-
-                <p class="project-category">Python BeautifulSoup & Selenium Webdriver, Pandas & Numpy</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="Deep Learning">
-              <a href="https://github.com/SnazzyBeatle115/Smartcycle">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">SmartCycle - Machine Learning Trash Classification</h3>
-
-                <p class="project-category">Python PyTorch, Tensorflow, Keras</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="Deep Learning">
-              <a href="https://github.com/kathytran88/face_emotion_recognition">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Facial Emotion Recognition</h3>
-
-                <p class="project-category">Python PyTorch</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="Web Development, Has live server">
-              <a href="https://pokemon-game-eight-kappa.vercel.app/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/pokemon.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Pokemon Game</h3>
-
-                <p class="project-category">Javascript, HTML/CSS</p>
-
-              </a>
-            </li>
-          
-            <li class="project-item  active" data-filter-item data-category="Web Development">
-              <a href="https://github.com/kathytran88/onlinestore_php">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/onlinestore.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Online Shopping Cart</h3>
-
-                <p class="project-category">PHP, Javascript, HTML/CSS</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="Web Development, Has live server">
-              <a href="https://memory-matching-game-phi.vercel.app/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/memory.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Memory Matching Game</h3>
-
-                <p class="project-category">Javascript, HTML/CSS</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
+    
 
       <!--
         - #BLOG
