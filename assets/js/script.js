@@ -1,11 +1,6 @@
 'use strict';
 
-
-
-// element toggle function
-// Add this to your script.js file
-
-// Variables for navbar functionality
+// navbar
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
@@ -28,6 +23,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
     // Add active class to corresponding page
     const currentPage = pages[i];
     currentPage.classList.add("active");
+  });
+}
+
+// Portfolio link functionality
+const portfolioLink = document.getElementById('portfolioLink');
+if (portfolioLink) {
+  portfolioLink.addEventListener('click', function() {
+    // Find specifically the Projects button in the navigation
+    const projectsNavLink = Array.from(navigationLinks).find(link => 
+      link.textContent.trim() === 'Projects'
+    );
+    if (projectsNavLink) {
+      projectsNavLink.click();
+    }
   });
 }
 
