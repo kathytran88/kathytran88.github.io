@@ -919,14 +919,46 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
-.filter-list { display: none; }
+/* Main filter list (desktop) */
+.main-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
 
+.main-filter-list .filter-item {
+  display: inline-flex;
+}
+
+.main-filter-list .filter-item button {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-filter-list .filter-item button:hover,
+.main-filter-list .filter-item button.active {
+  background: var(--jet);
+  color: var(--light-gray-70);
+}
+
+/* Mobile dropdown styles */
 .filter-select-box {
+  display: none; /* Hidden by default on desktop */
   position: relative;
   margin-bottom: 25px;
+  z-index: 1000;
 }
 
 .filter-select {
+  position: relative;
+  z-index: 1000;
   background: var(--eerie-black-2);
   color: var(--light-gray);
   display: flex;
@@ -940,8 +972,60 @@ main {
   font-weight: var(--fw-300);
 }
 
-.filter-select.active .select-icon { transform: rotate(0.5turn); }
+.dropdown-filter-list {
+  background: var(--eerie-black-2);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  display: none;
+  z-index: 1001;
+  margin-top: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.dropdown-filter-list.active {
+  display: block;
+}
+
+.filter-select.active .select-icon {
+  transform: rotate(0.5turn);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-filter-list .filter-item {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  padding: 8px 10px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-filter-list .filter-item:hover {
+  background: var(--jet);
+  color: var(--light-gray-70);
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .main-filter-list {
+    display: none; /* Hide desktop filter on mobile */
+  }
+  
+  .filter-select-box {
+    display: block; /* Show mobile dropdown on mobile */
+  }
+}
+
+/**/
 .select-list {
   background: var(--eerie-black-2);
   position: absolute;
@@ -955,12 +1039,6 @@ main {
   visibility: hidden;
   pointer-events: none;
   transition: 0.15s ease-in-out;
-}
-
-.filter-select.active + .select-list {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
 }
 
 .select-item button {

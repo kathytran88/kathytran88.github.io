@@ -40,6 +40,82 @@ if (portfolioLink) {
   });
 }
 
+// Mobile nav bar filter
+document.addEventListener('DOMContentLoaded', () => {
+  // Desktop and mobile filter elements
+  const filterButtons = document.querySelectorAll('[data-filter-btn]');
+  const filterSelect = document.querySelector('[data-select]');
+  const filterList = document.querySelector('.dropdown-filter-list');
+  const filterItems = document.querySelectorAll('.dropdown-filter-list .filter-item');
+  const selectValue = document.querySelector('[data-select-value]');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  // Function to filter projects
+  const filterProjects = (category) => {
+    projectItems.forEach(project => {
+      const categories = project.dataset.category?.split(',').map(cat => cat.trim()) || [];
+      
+      if (category === 'All' || categories.includes(category)) {
+        project.classList.add('active');
+      } else {
+        project.classList.remove('active');
+      }
+    });
+  };
+
+  // Desktop filter buttons
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      button.classList.add('active');
+      // Filter projects
+      const selectedCategory = button.textContent.trim();
+      filterProjects(selectedCategory);
+    });
+  });
+
+  // Mobile dropdown toggle
+  filterSelect?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    filterSelect.classList.toggle('active');
+    filterList?.classList.toggle('active');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!filterSelect?.contains(e.target)) {
+      filterSelect?.classList.remove('active');
+      filterList?.classList.remove('active');
+    }
+  });
+
+  // Mobile filter items
+  filterItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Update dropdown button text
+      selectValue.textContent = item.textContent;
+      // Close dropdown
+      filterSelect.classList.remove('active');
+      filterList.classList.remove('active');
+      
+      // Filter projects
+      const selectedCategory = item.textContent.trim();
+      filterProjects(selectedCategory);
+      
+      // Update desktop buttons to match selection
+      filterButtons.forEach(btn => {
+        if (btn.textContent.trim() === selectedCategory) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    });
+  });
+});
+
 /*
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
