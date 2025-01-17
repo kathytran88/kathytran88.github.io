@@ -255,9 +255,14 @@ article.active {
   border-radius: 3px;
 }
 
+.has-scrollbar {
+  padding-bottom: 10px;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+}
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width: 8px; /* for vertical scrollbar */
+  height: 8px; /* for horizontal scrollbar */
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -267,10 +272,22 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar-thumb {
   background: rgb(245, 153, 16);
-  border-radius: 5px;
+  border-radius: 4px;
+  border: 2px solid transparent; /* Creates padding effect */
+  background-clip: padding-box;
+  /* Add hover state */
+  transition: background-color 0.2s;
 }
 
-.has-scrollbar::-webkit-scrollbar-button { width: 20px; }
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(225, 133, 0);
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 20px;
+  height: 20px;
+  background: var(--onyx);
+ }
 
 .content-card {
   position: relative;
